@@ -16,6 +16,9 @@ extern Logger logger;
  */
 void PluginInit()
 {
+    THook(bool, "?isTrustedSkin@SerializedSkin@@QEBA_NXZ", SerializedSkin* skin) {
+  return true;
+}
     // Your code here
     logger.info("Hello, world!");
 }
